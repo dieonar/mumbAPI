@@ -22,7 +22,7 @@ for (var i = 0; i < routes.length; i++)
     for (var j = 0; j < routes[i].length; j++)
     {
         var route = routes[i][j];
-        apiRouter[route.method](route.path, route.handler);
+        apiRouter[route.method](route.path, route.middlewares, route.handler);
     }
 }
     
